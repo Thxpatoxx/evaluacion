@@ -1,0 +1,91 @@
+.cajas{
+    background-color: rgba(0, 0, 0, 0.527);
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 35px;
+    border: 7px ridge #9FA464;
+    border-radius: 17px;
+    text-align: center;
+}
+.papa{
+  width: 100%;
+  color: black;
+  display: flex;
+  align-items: flex-end;
+  font-family: menu;
+  font-size: 30px;
+}
+.foto{
+    max-width: 40%;
+    border: 7px ridge #9FA464;
+    border-radius: 17px;
+    margin-left: 30%;
+}
+.foto img{
+    max-width: 100%;
+    max-height: 400px;
+}
+.problemas{
+    font-size: 20px;
+}
+.problemas h1{
+    margin-bottom: 0;
+}
+
+.hijo{
+  width: 33.3%;
+}
+
+.hijo2{
+  width: 33.3%;
+}
+
+.hijo3{
+  width: 33.3%;
+}
+.all{
+    padding:20px;
+    margin-top:40px;
+}
+.registratepara{
+    text-align: center;
+    font-size: 60px;
+    width: 80%;
+    margin-left: 10%;
+}
+select{
+    font-size: 25px;
+    max-width: 100%;
+}
+@media screen and (max-device-width : 480px) {
+    .cajas{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .papa{
+        font-size: 20px;
+        background-color: rgba(0, 238, 255, 0.205);
+        margin-top: 3px;
+    }
+    .log{
+        font-size: 25px;
+        margin-top: 40px
+    }
+    .all{
+        margin-top: 70px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .registratepara{
+        text-align: center;
+        font-size: 30px;
+        width: 80%;
+    }
+    select{
+        font-size: 20px
+    }
+    textarea{
+        max-width: 90%;
+    }
+}

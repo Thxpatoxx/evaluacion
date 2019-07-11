@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+</head>
+
+
+    <form method="POST" class="sad" style="text-align: center; margin-top:60px" >{% csrf_token %}
+        <h1> - Añadir - </h1>
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Añadir</button>
+        <br>
+        <br>
+    </form>
+{% endblock %}

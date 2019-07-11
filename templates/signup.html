@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+  <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+  <title>Registrarse</title>
+</head>
+<body>
+  <form class="sad" method="post">
+    <center><h1>Registrarse</h1></center>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <center><button type="submit">Aceptar</button></center>
+    <br>
+  </form>
+</body>
+</html>

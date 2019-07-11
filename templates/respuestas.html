@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+    <center><h1 style="font-size: 50px; margin-top:0; margin-bottom:0;">{{Encuestas.consulta}}</h1></center>
+    <a href="{% url 'nuevarespuesta' %}" >
+        <div style="text-align: center;font-size: 30px;">
+            <img src="https://image.flaticon.com/icons/svg/1646/1646441.svg" style="width: 40px">
+            Responder
+        </div>
+    </a>
+    <center><h1 style=" margin-bottom:0;"> - Listado Votaciones - </h1></center>
+    <div class="cajas" style=" margin-top:0;">
+        <div class="papa">
+            <div class="hijo">Nombre Completo</div>
+            <div class="hijo2">Rut</div>
+            <div class="hijo3">Respuesta</div>
+        </div>
+        <hr>
+        {% for Respuesta in Respuestas %}
+            {% if Respuesta.encuesta == Encuestas %}
+            <div class="papa">
+                <div class="hijo">
+                    {{Respuesta.author.nombre}} {{Respuesta.author.apellido_paterno}} {{Respuesta.author.apellido_materno}}
+                </div>
+                <div class="hijo2">{{Respuesta.author.rut}}</div>
+                <div class="hijo3">{{Respuesta.respuesta}}</div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,47 @@
+@font-face{
+    font-family: "po";
+    src: url("font/Typo Cut-Out Striped Demo.otf");
+}
+body {
+    margin:0;
+    background-color:#c49d34;
+    font-family: po;
+}
+.sad{
+    background-color: rgba(0, 0, 0, 0.527);
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 35px;
+    border: 7px ridge #9FA464;
+    border-radius: 17px;
+    padding: 3px;
+}
+button{
+    width: 33%;
+    height: 30px;
+    font-size: 20px;
+    font-family: po;
+}
+label{
+    font-size: 20px;
+    color: rgb(94, 10, 10);
+    font-family: po;
+}
+input{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 40%;
+}
+@media screen and (max-device-width : 480px) {
+    .sad{
+        text-align: center;
+    }
+    input{
+        width: 90%;
+        height: 30px;
+    }
+    li{
+        width: 90%;
+    }
+}

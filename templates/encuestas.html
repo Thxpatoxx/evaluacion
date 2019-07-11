@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+    <div style="text-align: center">
+        <hr>
+        {% for post in posts %}
+            {% if post.fecha_realizara %}
+            <div class="problemas">
+                    <h1><a href="#">{{ post.titulo }}</a></h1>
+                    Fecha/Hora Publicación: {{ post.fechapub }} <br>
+                    Fecha/Hora fecha en evento: {{ post.fecha_realizara }} <br>
+                    <div class="foto"><img src="{{ post.foto.url }}" alt=""></div>
+                    Descripcion: {{ post.descripcion }} <br>
+            </div>
+            {% elif post.foto %}
+            <div class="problemas">
+                    <h1><a href="#">{{ post.titulo }}</a></h1>
+                    Publicado por: {{ post.author }} <br>
+                    Fecha/Hora Publicación: {{ post.fechapub }} <br>
+                    <div class="foto"><img src="{{ post.foto.url }}" alt=""></div>
+                    Descripcion: {{ post.descripcion }} <br>
+            </div>
+
+
+            <a href="/admin/users/informe/add/" >
+                <div style="text-align: center;font-size: 30px;">
+                    <img src="https://image.flaticon.com/icons/svg/685/685798.svg" style="width: 40px">
+                    Informa tu
+                </div>
+            </a>
+            {% else %}
+                <h1><a href="{% url 'respuestas' pk=post.pk %}">{{ post.consulta }}</a></h1>
+                {{ post.author }} <br>
+                {{ post.fechapub }} <br>
+                <hr width="50%">
+            {% endif %}
+        {% endfor %}
+    </div>
+<br>
+{% endblock %}
