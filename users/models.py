@@ -24,7 +24,7 @@ class Evento(models.Model):
     descripcion = models.TextField()
     fechapub = models.DateTimeField(default=timezone.now)
     fecha_realizara = models.DateTimeField(default=timezone.now)
-    foto = models.ImageField(upload_to="photos", default="photos/lol.png")
+    foto = models.CharField(max_length=200)
     def __str__(self):
         return self.titulo
 
