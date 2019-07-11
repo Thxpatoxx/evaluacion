@@ -16,7 +16,7 @@ class Informe(models.Model):
     titulo = models.CharField(max_length=200)
     descripcion = models.TextField()
     fechapub = models.DateTimeField(default=timezone.now)
-    foto = models.CharField(max_length=200)
+    foto = models.ImageField(upload_to="photos", default="photos/lol.png")
     def __str__(self):
         return self.titulo
 class Evento(models.Model):
@@ -24,7 +24,7 @@ class Evento(models.Model):
     descripcion = models.TextField()
     fechapub = models.DateTimeField(default=timezone.now)
     fecha_realizara = models.DateTimeField(default=timezone.now)
-    foto = models.CharField(max_length=200)
+    foto = models.ImageField(upload_to="photos", default="photos/lol.png")
     def __str__(self):
         return self.titulo
 
